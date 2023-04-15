@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificardor de Texto - Alura Challenges Oracle ONE</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="main_container">
+        <section class="main_cod">
+            <div class="cod_logo">
+                <img src="./logoAlura.svg" alt="Logo" class="logo_img" />
+                <div class="logo_text">
+                    <p class="cod_title">Alura Challenges Oracle ONE</p>
+                    <p class="cod_title">Decodificardor de Texto</p>
+                </div>
+            </div>
+            <div class="main_textarea">
+                <p class="textarea_title">Digite seu texto</p>
+                <textarea name="codificador" id="cod" cols="48%" rows="10"></textarea>
+            </div>
+
+            <img src="./iconInfo.svg" alt="Info" />
+            <p class="info_text">Apenas letras minúsculas e sem acento.</p>
+            <div class="main_buttons">
+                <button class="button_criptografar" id="btn_cod" type="submit">
+                    Criptografar
+                </button>
+                <button class="button_descriptografar" id="btn_decod" type="submit">
+                    Descriptografar
+                </button>
+            </div>
+        </section>
+
+        <section class="main_decod">
+            <div class="decod_mens">
+                <div class="main_banner">
+                    <img src="./bannerPage.svg" alt="Banner" class="banner_page"/>
+                </div>
+                <p class="mens_title">Nenhuma mensagem encontrada</p>
+                <p class="mens_subtitle">
+                    Digite um texto que você deseja criptografar ou descriptografar.
+                </p>
+            </div>
+
+
+            <div class="main_textarea">
+                <textarea name="decodificador" id="decod" cols="48%" rows="10"></textarea>
+                <button class="button_copy" id="btn_copy" type="submit">
+                    Copiar
+                </button>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

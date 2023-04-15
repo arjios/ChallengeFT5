@@ -1,0 +1,87 @@
+.main_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.main_cod {
+    background: blue;
+    padding: 10px;
+    width: 100%;
+}
+
+.cod_logo {
+    display: flex;
+}
+
+.logo_text {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.main_textarea {
+    width: 100%;
+}
+
+.main_textarea textarea {
+    margin: 0 auto;
+    resize: none;
+}
+
+
+
+.main_decod {
+    background: red;
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+/* ============================= BreakPoints ==================================== */
+
+/* Extra Small */
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Small */
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Medium */
+@media only screen and (min-width: 768px) {
+
+    .main_container {
+        flex-direction: row;
+    }
+
+    .main_cod {
+        background: green;
+    }
+    
+    .main_decod {
+        background: yellowgreen;
+    }
+}
+
+/* Large */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra Large */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Extra Extra Large */
+@media only screen and (min-width: 1400px) {
+
+}
