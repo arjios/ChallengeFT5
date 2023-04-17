@@ -23,15 +23,14 @@
 }
 
 #textareadecod {
-    display: none;
+  display: none;
 }
 
 .main_textarea {
   align-items: start;
   display: flex;
   flex-direction: column;
-  justify-content:left;
-
+  justify-content: left;
 }
 
 .textarea_title {
@@ -43,7 +42,7 @@
 }
 
 .textarea_cod {
-    width: 100%;
+  width: 100%;
 }
 
 .main_textarea textarea {
@@ -121,19 +120,20 @@
 }
 
 .main_decod__page {
-  align-items: center;
+  align-items:center;
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content:baseline;
   border-radius: 20px;
-  box-shadow: 4px 4px 4px 1px rgba(E, E, E, 0.2);
+  box-shadow: 14px 14px 14px 1px rgba(E, E, E, 0.2);
   height: 564px;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
 }
 
 .decod_mens {
   display: contents;
+  justify-content: space-between;
 }
 
 .main_banner {
@@ -169,11 +169,16 @@
   border: none;
 }
 
+.main_textarea textarea {
+    min-width: 300px;
+    max-width: 80%;
+  }
+
 .textarea_copy {
-    margin: 20px 10px;
-    padding-top: 20px;
-    border: none;
-    width: 80%;
+  margin: 20px 10px;
+  padding-top: 20px;
+  border: none;
+  width: 80%;
 }
 
 .button_copy {
@@ -184,9 +189,9 @@
   font-weight: 400;
   font-size: 16px;
   height: 47px;
-  margin: 14px 20px;
+  margin: 60px 40px 10px 40px;
   text-align: center;
-  width: 90px;
+  width: 80%;
 }
 
 .button_copy:hover {
@@ -200,11 +205,11 @@
 @media only screen and (min-width: 576px) {
   .main_textarea textarea {
     min-width: 300px;
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .button_copy {
-    width: 228px;
+    width: 80%;
   }
 }
 
@@ -212,7 +217,7 @@
 @media only screen and (min-width: 576px) {
   .main_textarea textarea {
     min-width: 300px;
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 
@@ -236,9 +241,10 @@
   }
 
   .button_copy {
+    align-items: baseline;
     height: 67px;
     margin: 20px 40px;
-    width: 100%;
+    width: 80%;
   }
 
   .main_container {
@@ -248,7 +254,7 @@
   .main_cod {
     width: 50%;
   }
-  
+
   .main_decod {
     align-items: center;
     display: flex;
@@ -259,7 +265,7 @@
 
   .main_decod__page {
     width: 378px;
-    margin: 20px auto;
+    margin: 60px 40px 10px 40px;
   }
 }
 
@@ -273,7 +279,7 @@
   .main_cod {
     width: 60%;
   }
-  
+
   .main_decod {
     display: flex;
     justify-content: center;
@@ -282,8 +288,7 @@
 
   .button_copy {
     height: 67px;
-    margin: 20px 40px;
-    width: 80%;
+    margin: 60px 40px 10px 40px;
   }
 }
 
@@ -293,17 +298,16 @@
     min-width: 300px;
     max-width: 100%;
   }
-  
+
   .main_decod {
     display: flex;
     justify-content: center;
     width: 100%;
   }
-  
+
   .button_copy {
     height: 67px;
-    margin: 20px 40px;
-    width: 80%;
+    margin: 60px 40px 10px 40px;
   }
 }
 
@@ -313,17 +317,16 @@
     min-width: 300px;
     max-width: 100%;
   }
-  
+
   .main_decod {
     display: flex;
     justify-content: center;
     width: 100%;
   }
-  
+
   .button_copy {
     height: 67px;
-    margin: 20px 40px;
-    width: 80%;
+    margin: 60px 40px 10px 40px;
   }
 
   .main_container {
