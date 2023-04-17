@@ -1,5 +1,5 @@
 .main_container {
-    align-items: top;
+    align-items:start;
     background: #e5e5e5;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 .main_cod {
-    background: blue;
+    background: #e5e5e5;
     padding: 10px;
     width: 100%;
 }
@@ -22,20 +22,26 @@
     margin: 10px auto;
 }
 
+.main_textarea {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
 .textarea_title {
-    margin: 20px;
+    margin: 0 auto;
     color: #0a3871;
     font-weight: 400;
     font-size: 32px;
 }
 
-.main_textarea {
-    width: 100%;
-}
-
 .main_textarea textarea {
     margin: 0 auto;
     resize: none;
+    min-width: 150px;
+    max-width: 290px;
 }
 
 .main_info {
@@ -52,8 +58,9 @@
 }
 
 .main_buttons {
+    align-items: center;
     display: flex;
-    margin: 10px auto;
+    justify-content: center;
 }
 
 .button_criptografar {
@@ -63,8 +70,7 @@
     color: #FFF;
     font-weight: 400;
     font-size: 16px;
-    height: 67px;
-    line-height: 19px;
+    height: 47px;
     margin-top: 24px;
     margin-right: 24px;
     text-align: center;
@@ -83,8 +89,7 @@
     color: #0A3871;
     font-weight: 400;
     font-size: 16px;
-    height: 67px;
-    line-height: 19px;
+    height: 47px;
     margin-top: 24px;
     margin-right: 24px;
     text-align: center;
@@ -97,21 +102,118 @@
 }
 
 .main_decod {
-    background: red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px;
+    height: 564px;
     width: 100%;
+}
+
+.main_decod__page {
+    align-items: center;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 1px rgba(E, E, E, 0.2);
+    height: 564px;
+    margin: 10px;
+}
+
+.decod_mens {
+    display: none;
+}
+
+.main_banner {
+    align-items: center;
+    justify-content: center;
+}
+
+.main_banner img {
+    margin: 0 auto;
+}
+
+.mens_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+}
+
+.mens_subtitle {
+    color: #495057;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.main_textarea {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 10px;
+    border: none;
+}
+
+.button_copy {
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+    border-radius: 32px;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 16px;
+    height: 47px;
+    margin: 14px 20px;
+    text-align: center;
+    width: 128px;
+}
+
+.button_copy:hover {
+    background-color: #8F8F8F;
+    cursor: pointer;
 }
 
 /* ============================= BreakPoints ==================================== */
 
 /* Extra Small */
-@media only screen and (min-width: 576px) {}
+@media only screen and (min-width: 576px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+}
 
 /* Small */
-@media only screen and (min-width: 576px) {}
+@media only screen and (min-width: 576px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+}
 
 /* Medium */
 @media only screen and (min-width: 768px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+    .button_criptografar {
+        height: 67px;
+    }
+
+    .button_descriptografar {
+        height: 67px;
+    }
+
+    .button_copy {
+        height: 67px;
+    }
+
     .main_container {
         flex-direction: row;
     }
@@ -126,10 +228,25 @@
 }
 
 /* Large */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+}
 
 /* Extra Large */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+}
 
 /* Extra Extra Large */
-@media only screen and (min-width: 1400px) {}
+@media only screen and (min-width: 1400px) {
+    .main_textarea textarea {
+        min-width: 300px;
+        max-width: 100%;
+    }
+}

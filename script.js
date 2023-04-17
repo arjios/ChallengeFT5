@@ -11,65 +11,123 @@ function clear() {
 }
 
 function criptografa(cript) {
-    let texto="";
+    let str = "";
     switch (cript) {
         case chavesVogais[0]:
-            texto = chavesCrip[0];
+            str = chavesCrip[0];
             break;
         case chavesVogais[1]:
-            texto = chavesCrip[1];
+            str = chavesCrip[1];
             break;
         case chavesVogais[2]:
-            texto = chavesCrip[2];
+            str = chavesCrip[2];
             break;
         case chavesVogais[3]:
-            texto = chavesCrip[3];
+            str = chavesCrip[3];
             break;
         case chavesVogais[4]:
-            texto = chavesCrip[4];
+            str = chavesCrip[4];
             break;
-        default :
-            texto = cript;
-    }
-    return texto;
-}
-
-function read_textarea_cod() {
-    let text = document.getElementById('cod').value;
-    for (let i = 0; i < text.length; i++) {
-        textoCripto.push(criptografa(text.substring(i, i + 1)));
-        console.log(textoCripto[i]);
-    }
-    return textoCripto;
-}
-
-function insertToCripto(matriz) {
-    let str="";
-    for(let i=0; i<matriz.length; i++) {
-        str = str + matriz[i];
+        default:
+            str = cript;
     }
     return str;
 }
 
-function read_textarea_decod() {
-    let text = document.getElementById('decod').value;
-    return text;
+function descriptografa(chave) {
+    let str = "";
+    document.getElementById('cod').value = chave + `\n`;
+    switch (chave) {
+        case chavesCrip[0]:
+            str = chavesVogais[0];
+            break;
+        case chavesCrip[1]:
+            str = chavesVogais[1];
+            break;
+        case chavesCrip[2]:
+            str = chavesVogais[2];
+            break;
+        case chavesCrip[3]:
+            str = chavesVogais[3];
+            break;
+        case chavesCrip[4]:
+            str = chavesVogais[4];
+            break;
+        default:
+            str = chave;
+    }
+    return str;
 }
 
-var evt_cod = document.querySelector('#btn_cod')
-evt_cod.addEventListener('click', function () {
+function insertToCripto(matriz) {
+    let str_insert = "";
+    for (let i = 0; i < matriz.length; i++) {
+        str_insert = str_insert + matriz[i];
+    }
+    return str_insert;
+}
+
+function read_textarea_cod() {
+    let text = document.getElementById('cod').value;
     clear();
+    for (let i = 0; i < text.length; i++) {
+        textoCripto.push(criptografa(text.substring(i, i + 1)));
+    }
+    return textoCripto;
+}
+
+function read_textarea_decod() {
+    let text = document.getElementById('cod').value;
+    clear();
+    let j=0
+    while(j < text.length) {
+        let txt = text.substring(j, j + 1);
+        if(txt == `\n`) {
+            textoDecripto.push(chavesVogais[0])
+        }
+        if(text.substring(j, j + 4) == "imes") {
+            txt = chavesVogais[1];
+            j+=3;
+        }
+        if(text.substring(j, j + 2) == "ai") {
+            txt = chavesVogais[2];
+            j+=1;
+        }
+        if(text.substring(j, j + 4) == "ober") {
+            txt = chavesVogais[3];
+            j+=3;
+        }
+        if(text.substring(j, j + 4) == "ufat") {
+            txt = chavesVogais[4];
+            j+=3;
+        }
+        textoDecripto.push(txt);
+        j++;
+    }
+    return textoDecripto;
+}
+
+var evt_cod = document.querySelector('#btn_cod');
+evt_cod.addEventListener('click', function () {
     let str = "";
     str = insertToCripto(read_textarea_cod());
     document.getElementById('decod').value = str;
 });
 
-var evt_decod = document.querySelector('#btn_decod')
+var evt_decod = document.querySelector('#btn_decod');
 evt_decod.addEventListener('click', function () {
-    console.log("Descriptografar: " + read_textarea_decod());
-    clear();
+    let str = "";
+    str = insertToCripto(read_textarea_decod());
+    document.getElementById('decod').value = str;
 });
 
+var evt_copy = document.querySelector('#btn_copy');
+evt_copy.addEventListener('click', function () {
+    let str =  document.getElementById('decod').value;
+    document.getElementById('cod').value = str;
+    document.getElementById('decod').value = "";
+    str = "";
+});
 
 clear();
 

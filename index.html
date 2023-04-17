@@ -15,12 +15,14 @@
                 <img src="./logoAlura.svg" alt="Logo" class="logo_img" />
                 <div class="logo_text">
                     <p class="cod_title">Alura Challenges Oracle ONE</p>
-                    <p class="cod_title">Decodificardor de Texto</p>
+                    <p class="cod_title">Decodificador de Texto</p>
                 </div>
             </div>
+
             <div class="main_textarea">
                 <p class="textarea_title">Digite seu texto</p>
-                <textarea name="codificador" id="cod" cols="48%" rows="10"></textarea>
+                <textarea class="textarea_cod"  name="codificador"
+                 id="cod" cols="50" rows="10" ></textarea>
             </div>
 
             <div class="main_info">
@@ -39,25 +41,29 @@
         </section>
 
         <section class="main_decod">
-            <div class="decod_mens">
-                <div class="main_banner">
-                    <img src="./bannerPage.svg" alt="Banner" class="banner_page"/>
+            <div class="main_decod__page">
+                <div class="decod_mens">
+                    <div class="main_banner">
+                        <img src="./bannerPage.svg" alt="Banner" class="banner_page"/>
+                    </div>
+                    <p class="mens_title">Nenhuma mensagem encontrada</p>
+                    <p class="mens_subtitle">
+                        Digite um texto que você deseja criptografar ou descriptografar.
+                    </p>
                 </div>
-                <p class="mens_title">Nenhuma mensagem encontrada</p>
-                <p class="mens_subtitle">
-                    Digite um texto que você deseja criptografar ou descriptografar.
-                </p>
+    
+                <div class="main_textarea">
+                    <textarea name="decodificador" id="decod" cols="48%" rows="10"></textarea>
+                    <button class="button_copy" id="btn_copy" type="submit">
+                        Copiar
+                    </button>
+                </div>
             </div>
 
-
-            <div class="main_textarea">
-                <textarea name="decodificador" id="decod" cols="48%" rows="10"></textarea>
-                <button class="button_copy" id="btn_copy" type="submit">
-                    Copiar
-                </button>
-            </div>
         </section>
 
     </main>
 </body>
+<script src="./script.js"></script>
 </html>
+
