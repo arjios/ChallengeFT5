@@ -109,6 +109,8 @@ function read_textarea_decod() {
 
 var evt_cod = document.querySelector('#btn_cod');
 evt_cod.addEventListener('click', function () {
+    document.getElementById("decod_mensagens").style.display = "none";
+    document.getElementById("textareadecod").style.display = "contents";
     let str = "";
     str = insertToCripto(read_textarea_cod());
     document.getElementById('decod').value = str;
