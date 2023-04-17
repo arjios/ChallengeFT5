@@ -2,12 +2,14 @@ var chavesVogais = ["e", "i", "a", "o", "u"];
 var chavesCrip = ["\n", "imes", "ai", "ober", "ufat"];
 var textoCripto = [];
 var textoDecripto = [];
-var resultado = "";
 var texto = "";
 
 function clear() {
     document.getElementById('cod').value = '';
     document.getElementById('decod').value = '';
+    textoCripto.length = 0;
+    textoDecripto.length = 0;
+    texto = "";
 }
 
 function criptografa(cript) {
@@ -31,12 +33,12 @@ function criptografa(cript) {
         default:
             str = cript;
     }
+    cript="";
     return str;
 }
 
 function descriptografa(chave) {
     let str = "";
-    document.getElementById('cod').value = chave + `\n`;
     switch (chave) {
         case chavesCrip[0]:
             str = chavesVogais[0];
@@ -56,6 +58,7 @@ function descriptografa(chave) {
         default:
             str = chave;
     }
+    chave="";
     return str;
 }
 
@@ -68,16 +71,19 @@ function insertToCripto(matriz) {
 }
 
 function read_textarea_cod() {
-    let text = document.getElementById('cod').value;
+    let text = "";
+    text = document.getElementById('cod').value;
     clear();
     for (let i = 0; i < text.length; i++) {
         textoCripto.push(criptografa(text.substring(i, i + 1)));
     }
+    console.log(textoCripto);
     return textoCripto;
 }
 
 function read_textarea_decod() {
-    let text = document.getElementById('cod').value;
+    let text = "";
+    text = document.getElementById('cod').value;
     clear();
     let j=0
     while(j < text.length) {
@@ -109,25 +115,38 @@ function read_textarea_decod() {
 
 var evt_cod = document.querySelector('#btn_cod');
 evt_cod.addEventListener('click', function () {
+    let str = "";
     document.getElementById("decod_mensagens").style.display = "none";
     document.getElementById("textareadecod").style.display = "contents";
-    let str = "";
     str = insertToCripto(read_textarea_cod());
+    clear();
+    console.log(str);
     document.getElementById('decod').value = str;
+    textoCripto.clear;
+    str = "";
 });
 
 var evt_decod = document.querySelector('#btn_decod');
 evt_decod.addEventListener('click', function () {
     let str = "";
+    document.getElementById("decod_mensagens").style.display = "none";
+    document.getElementById("textareadecod").style.display = "contents";
     str = insertToCripto(read_textarea_decod());
+    clear();
     document.getElementById('decod').value = str;
+    textoDecripto.clear;
+    str = "";
 });
 
 var evt_copy = document.querySelector('#btn_copy');
 evt_copy.addEventListener('click', function () {
-    let str =  document.getElementById('decod').value;
+    let str = "";
+    document.getElementById("decod_mensagens").style.display = "contents";
+    document.getElementById("textareadecod").style.display = "none";
+    str =  document.getElementById('decod').value;
+    clear();
+    console.log(str);
     document.getElementById('cod').value = str;
-    document.getElementById('decod').value = "";
     str = "";
 });
 
