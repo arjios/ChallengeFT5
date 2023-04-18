@@ -1,5 +1,5 @@
 var chavesVogais = ["e", "i", "a", "o", "u"];
-var chavesCrip = [`\n`, "imes", "ai", "ober", "ufat"];
+var chavesCrip = ["enter", "imes", "ai", "ober", "ufat"];
 var textoCripto = [];
 var textoDecripto = [];
 var texto = "";
@@ -37,31 +37,6 @@ function criptografa(cript) {
   return str;
 }
 
-function descriptografa(chave) {
-  let str = "";
-  switch (chave) {
-    case chavesCrip[0]:
-      str = chavesVogais[0];
-      break;
-    case chavesCrip[1]:
-      str = chavesVogais[1];
-      break;
-    case chavesCrip[2]:
-      str = chavesVogais[2];
-      break;
-    case chavesCrip[3]:
-      str = chavesVogais[3];
-      break;
-    case chavesCrip[4]:
-      str = chavesVogais[4];
-      break;
-    default:
-      str = chave;
-  }
-  chave = "";
-  return str;
-}
-
 function insertToCripto(matriz) {
   let str_insert = "";
   for (let i = 0; i < matriz.length; i++) {
@@ -86,10 +61,10 @@ function read_textarea_decod() {
   clear();
   let j = 0;
   while (j < text.length) {
-    let txt = text.substring(j, j + 1);
-    if (txt == `\n`) {
-      textoDecripto.push("e");
-      txt="";
+    let txt = text.substring(j, j + 5);
+    if (txt == "enter") {
+      txt = chavesVogais[0];
+      j += 4;
     }
     if (text.substring(j, j + 4) == "imes") {
       txt = chavesVogais[1];
