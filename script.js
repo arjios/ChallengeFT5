@@ -57,22 +57,21 @@ function read_textarea_cod() {
 
 function read_textarea_decod() {
   let text = "";
+  let txt = "";
   text = document.getElementById("cod").value;
   clear();
   let j = 0;
   while (j < text.length) {
-    let txt = text.substring(j, j + 5);
-    if (txt == "enter") {
-      txt = chavesVogais[0];
-      j += 4;
+    txt = text.substring(j, j + 1);
+    if (text.substring(j, j + 2) == "ai") {
+      txt = chavesVogais[2];
+      console.log(txt);
+      j += 1;
     }
     if (text.substring(j, j + 4) == "imes") {
       txt = chavesVogais[1];
+      console.log("Valor chave" + j);
       j += 3;
-    }
-    if (text.substring(j, j + 2) == "ai") {
-      txt = chavesVogais[2];
-      j += 1;
     }
     if (text.substring(j, j + 4) == "ober") {
       txt = chavesVogais[3];
@@ -81,6 +80,11 @@ function read_textarea_decod() {
     if (text.substring(j, j + 4) == "ufat") {
       txt = chavesVogais[4];
       j += 3;
+    }
+    if (text.substring(j, j + 5) == "enter") {
+      txt = chavesVogais[0];
+      console.log(txt);
+      j += 4;
     }
     textoDecripto.push(txt);
     j++;
