@@ -1,5 +1,5 @@
 var chavesVogais = ["e", "i", "a", "o", "u"];
-var chavesCrip = ["\n", "imes", "ai", "ober", "ufat"];
+var chavesCrip = [`\n`, "imes", "ai", "ober", "ufat"];
 var textoCripto = [];
 var textoDecripto = [];
 var texto = "";
@@ -88,7 +88,8 @@ function read_textarea_decod() {
   while (j < text.length) {
     let txt = text.substring(j, j + 1);
     if (txt == `\n`) {
-      textoDecripto.push(chavesVogais[0]);
+      textoDecripto.push("e");
+      txt="";
     }
     if (text.substring(j, j + 4) == "imes") {
       txt = chavesVogais[1];

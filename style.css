@@ -124,9 +124,9 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content:baseline;
+  justify-content: center;
   border-radius: 20px;
-  box-shadow: 14px 14px 14px 1px rgba(E, E, E, 0.2);
+  box-shadow: 14px 14px 14px 14px rgba(224, 224, 224, 0.3);
   height: 564px;
   margin: 10px 10px 30px 10px;
 }
@@ -330,6 +330,6 @@
   }
 
   .main_container {
-    padding: 0px auto;
+    padding: 0 10px;
   }
 }
